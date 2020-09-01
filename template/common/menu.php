@@ -9,11 +9,14 @@
     </h2>
 
     <?php
-      wp_nav_menu( array(
+      $philosophy_menu = wp_nav_menu( array(
        'theme_location' => 'mainmenu',
        'menu_id'        => 'header_menu',
-       'menu_class'     => 'header__nav'
+       'menu_class'     => 'header__nav',
+       'echo'           =>  false
       ) );
+      $philosophy_menu = str_replace('menu-item-has-children','menu-item-has-children has-children',$philosophy_menu);
+      echo $philosophy_menu;
     ?>
 
 
