@@ -7,9 +7,9 @@
                       <?php
                         $philosophy_cmnt_number = get_comments_number();
                         if($philosophy_cmnt_number<=1){
-                          echo $philosophy_cmnt_number." ".__('Comments','philosophy');
+                          echo wp_kses_post($philosophy_cmnt_number)." ".__('Comments','philosophy');
                         }else {
-                          echo $philosophy_cmnt_number." ".__('Comments','philosophy');
+                          echo wp_kses_post($philosophy_cmnt_number)." ".__('Comments','philosophy');
                         }
                       ?>
                     </h3>
