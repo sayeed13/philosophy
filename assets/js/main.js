@@ -6,6 +6,22 @@
 (function($) {
 
     "use strict";
+
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if ( '103' == event.detail.contactFormId ) {
+          
+          var mslocation =  document.getElementById("mslocation").value;
+    
+          if (mslocation == "Hello") {
+            location = 'http://google.com/';
+          } else if (mslocation == "Hi") {
+            location = 'http://facebook.com/';
+          } else if (mslocation == "dhaka") {
+            location = 'http://facebook.com/';
+          }
+          
+        }
+    }, false ); 
     
     var cfg = {
         scrollDuration : 800, // smoothscroll duration
@@ -603,6 +619,8 @@
         } 
 
     };
+
+    
 
 
    /* Initialize
